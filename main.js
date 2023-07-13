@@ -2,9 +2,10 @@ const { Telegraf } = require("telegraf");
 const fs = require("fs");
 const path = require("path");
 const TelegramBot = require("node-telegram-bot-api");
+require("dotenv").config();
 
 // Replace with your Telegram bot's API token
-const token = "6241723335:AAGIqZihb7gePCcmty7MTIKVAhk5dxvMpsE";
+const token = process.env.token;
 
 const bot = new Telegraf(token);
 

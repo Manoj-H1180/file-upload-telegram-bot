@@ -1,11 +1,12 @@
 const TelegramBot = require("node-telegram-bot-api");
 const axios = require("axios");
+require("dotenv").config();
 
 // Replace the value below with the Telegram token you receive from @BotFather
-const token = "6241723335:AAGIqZihb7gePCcmty7MTIKVAhk5dxvMpsE";
+const token = process.env.token;
 
 // Replace the value below with the URL of your backend API
-const backendUrl = "http://localhost:5000/telegram/data";
+const backendUrl = process.env.url;
 
 // Create a new bot instance
 const bot = new TelegramBot(token, { polling: true });
